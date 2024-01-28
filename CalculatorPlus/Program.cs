@@ -1,65 +1,106 @@
-﻿while (true)
+﻿PrintInfo();
+while (true)
 {
-    decimal num1, num2;
-    Console.WriteLine("Введите первое число");
-    while (!decimal.TryParse(Console.ReadLine(), out num1))
+    try
     {
-        Console.WriteLine("Пожалуйста, введите корректное число.");
-    }
 
-    Console.WriteLine("Введите второе число");
-    while (!decimal.TryParse(Console.ReadLine(), out num2))
-    {
-        Console.WriteLine("Пожалуйста, введите корректное число.");
-    }
+        List<string> inputs = new List<string>();
+        string? inputNumber = "";
+        string? inputOperation = "";
 
-    Console.WriteLine("Выберите операцию: +, -, *, /, %, sqrt");
-    string operation = Console.ReadLine();
-
-    decimal result = 0;
-    switch (operation)
-    {
-        case "+":
-            result = num1 + num2;
-            break;
-        case "-":
-            result = num1 - num2;
-            break;
-        case "*":
-            result = num1 * num2;
-            break;
-        case "/":
-            if (num2 != 0)
+        while (inputOperation != "=")
+        {
+            Console.Write("Введите число: ");
+            inputNumber = Console.ReadLine();
+            if (!double.TryParse(inputNumber, out double number))
             {
-                result = num1 / num2;
+                throw new ArgumentException("Неверный ввод числа");
             }
-            else
+            inputs.Add(inputNumber);
+
+            Console.Write("Введите операцию: ");
+            inputOperation = Console.ReadLine();
+            inputs.Add(inputOperation);
+        }
+
+        double result = double.Parse(inputs[0]);
+        for (int i = 1; i < inputs.Count - 1; i += 2)
+        {
+            double number;
+            if (!double.TryParse(inputs[i + 1], out number))
             {
-                Console.WriteLine("Деление на ноль невозможно");
+                throw new ArgumentException("Неверный ввод числа");
             }
+            string operation = inputs[i];
+            switch (operation)
+            {
+                case "+":
+                    result += number;
+                    break;
+                case "-":
+                    result -= number;
+                    break;
+                case "*":
+                    result *= number;
+                    break;
+                case "/":
+                    if (number == 0)
+                    {
+                        throw new DivideByZeroException("Нельзя делить на ноль");
+                    }
+                    result /= number;
+                    break;
+                case "%":
+                    result %= number;
+                    break;
+                case "^":
+                    if (number <= 0)
+                    {
+                        throw new ArgumentException("Неверный ввод для возведения в степень");
+                    }
+                    result = Math.Pow(result, 1 / number);
+                    break;
+                default:
+                    throw new ArgumentException("Неверная операция");
+            }
+        }
+        Console.WriteLine($"Результат всех введённых операций: {string.Join(" ", inputs)} {result}");
+
+        Console.WriteLine("Хотите продолжить? (y/n)");
+
+        string continueInput = Console.ReadLine().ToLower();
+        if (continueInput == "y")
+        {
+            Console.Clear();
+            PrintInfo();
+        }
+        else
+        {
             break;
-        case "%":
-            result = num1 * (num2 / 100);
-            break;
-        case "sqrt":
-            result = (decimal)Math.Sqrt((double)num1);
-            break;
-        default:
-            Console.WriteLine("Неверная операция");
-            continue;
+        }
     }
-
-    Console.WriteLine("Результат: " + result);
-
-    Console.WriteLine("Хотите продолжить? (y/n)");
-
-    string continueInput = Console.ReadLine().ToLower();
-    if (continueInput == "y")
+    catch (Exception ex)
     {
-        Console.Clear();
-    }
-    else
-    {
-        break;
+        Console.WriteLine($"Произошла ошибка: {ex.Message}");
     }
 }
+
+static void PrintInfo()
+    {
+        Console.WriteLine("Добро пожаловать в калькулятор");
+        Console.WriteLine();
+        Console.WriteLine("Список поддерживаемых арифметический операций");
+        Console.WriteLine();
+        Console.WriteLine("+ : сложение чисел");
+        Console.WriteLine("- : вычитание чисел");
+        Console.WriteLine("* : умножение чисел");
+        Console.WriteLine("/ : деление чисел");
+        Console.WriteLine("% : от числа");
+        Console.WriteLine("^ : квадратный корень");
+        Console.WriteLine();
+        Console.WriteLine("Введите '=' для получения результата");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("Дробные числа вводить строго через ','");
+    }
+ 
