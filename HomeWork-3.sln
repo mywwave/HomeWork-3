@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisplayMonthByNumber", "DisplayMonthByNumber\DisplayMonthByNumber.csproj", "{F55644E4-6724-4309-9840-6AF1A3A85437}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisplayMonthByNumber #1", "DisplayMonthByNumber\DisplayMonthByNumber #1.csproj", "{F55644E4-6724-4309-9840-6AF1A3A85437}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisplayMonthByNumber #2", "DisplayMonthByNumber #2\DisplayMonthByNumber #2.csproj", "{D2DDEC92-8B1F-4AA2-BD92-130220E0951D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvenOddChecker", "EvenOddChecker\EvenOddChecker.csproj", "{E5BE418D-6DB0-42F7-83B8-61A1C8789E1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureRecommendation", "TemperatureRecommendation\TemperatureRecommendation.csproj", "{460B903F-3BCE-4108-86FE-9428D2861D49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainbowColorIdentifier", "RainbowColorIdentifier\RainbowColorIdentifier.csproj", "{A04B65FF-40B4-4433-9305-21AD7F77D14D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorPlus", "CalculatorPlus\CalculatorPlus.csproj", "{86245EF1-5192-44FA-AB07-3FDB44120EE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +25,26 @@ Global
 		{F55644E4-6724-4309-9840-6AF1A3A85437}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F55644E4-6724-4309-9840-6AF1A3A85437}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F55644E4-6724-4309-9840-6AF1A3A85437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2DDEC92-8B1F-4AA2-BD92-130220E0951D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2DDEC92-8B1F-4AA2-BD92-130220E0951D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2DDEC92-8B1F-4AA2-BD92-130220E0951D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2DDEC92-8B1F-4AA2-BD92-130220E0951D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5BE418D-6DB0-42F7-83B8-61A1C8789E1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5BE418D-6DB0-42F7-83B8-61A1C8789E1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5BE418D-6DB0-42F7-83B8-61A1C8789E1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5BE418D-6DB0-42F7-83B8-61A1C8789E1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{460B903F-3BCE-4108-86FE-9428D2861D49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{460B903F-3BCE-4108-86FE-9428D2861D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{460B903F-3BCE-4108-86FE-9428D2861D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{460B903F-3BCE-4108-86FE-9428D2861D49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A04B65FF-40B4-4433-9305-21AD7F77D14D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A04B65FF-40B4-4433-9305-21AD7F77D14D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A04B65FF-40B4-4433-9305-21AD7F77D14D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A04B65FF-40B4-4433-9305-21AD7F77D14D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86245EF1-5192-44FA-AB07-3FDB44120EE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86245EF1-5192-44FA-AB07-3FDB44120EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86245EF1-5192-44FA-AB07-3FDB44120EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86245EF1-5192-44FA-AB07-3FDB44120EE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
